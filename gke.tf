@@ -8,6 +8,4 @@ resource "google_container_cluster" "primary" {
   subnetwork               = google_compute_subnetwork.network-with-private-secondary-ip-ranges.self_link
   logging_service          = "logging.googleapis.com/kubernetes"
   monitoring_service       = "monitoring.googleapis.com/kubernetes"
-  networking_mode          = "VPC_NATIVE"
-  ip_allocation_policy    = "cluster_secondary_range_name"
 }
